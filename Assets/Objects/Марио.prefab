@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be98dba2fe3dada45b1dda071bd2eaeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPEED: 600
-  JUMP_HEIGHT: 500
+  SPEED: 300
+  JUMP_HEIGHT: 150
   AIRBORNE_SPEED_FACTOR: 0.5
   boomerangObject: {fileID: 0}
   isAirborne: 0
