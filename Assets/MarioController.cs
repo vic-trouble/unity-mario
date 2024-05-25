@@ -93,11 +93,9 @@ public class MarioController : MonoBehaviour
             Debug.DrawRay(hit.collider.transform.position, new Vector2(0, 0.5f), Color.red, 2.0f);
             if (hit.collider.CompareTag("Enemy"))
             {
-                /*
-                var monster = hit.collider.gameObject.GetComponent<MonsterController>();
+                var monster = hit.collider.gameObject.GetComponent<GumbaController>();
                 monster.Die();
                 Mario.AddForce(new Vector2(0, JUMP_HEIGHT * 0.25f));
-                */
             }
         }
     }

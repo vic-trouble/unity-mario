@@ -1729,6 +1729,10 @@ PrefabInstance:
       propertyPath: JUMP_HEIGHT
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4548954770581712698, guid: 588373a679f8d7448815c0d786c84985, type: 3}
+      propertyPath: marioObject
+      value: 
+      objectReference: {fileID: 1063782304}
     - target: {fileID: 4548954770581712701, guid: 588373a679f8d7448815c0d786c84985, type: 3}
       propertyPath: m_RootOrder
       value: 2
