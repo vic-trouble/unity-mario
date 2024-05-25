@@ -81,7 +81,7 @@ public class Boomerang : MonoBehaviour
         {
             if (collider.CompareTag("Enemy"))
             {
-                var monster = collider.gameObject.GetComponent<MonsterController>();
+                var monster = collider.gameObject.GetComponent<GumbaController>();
                 monster.Die();
             }
         }
