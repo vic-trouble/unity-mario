@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\MarioController.cs" />
     <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\GumbaController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
