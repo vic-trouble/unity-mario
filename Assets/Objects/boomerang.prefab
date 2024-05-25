@@ -99,11 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   THROW_X: 600
   THROW_Y: 0
-  LIFT_FORCE: 300
+  LIFT_FORCE: 250
   BACK_FORCE: 1000
-  LIFT_TIME: 0.4
+  LIFT_TIME: 0.45
   ROTATION_SPEED: 1000
-  FATAL_SPEED: 10
+  FATAL_SPEED: 4
 --- !u!50 &3947242080925807870
 Rigidbody2D:
   serializedVersion: 4
