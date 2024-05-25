@@ -73,12 +73,10 @@ public class MarioController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            /*
             var boomerang = Instantiate(boomerangObject).GetComponent<Boomerang>();
             var displacement = new Vector3(direction, 0, 0);
             boomerang.transform.position = Mario.transform.position + displacement;
             boomerang.Throw(direction);
-            */
         }
     }
 
