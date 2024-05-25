@@ -8,6 +8,7 @@ public class MarioController : MonoBehaviour
     public int JUMP_HEIGHT = 500;
     public float AIRBORNE_SPEED_FACTOR = 0.5f;
     public GameObject boomerangObject;
+    public int boomerangsCount = 3;
 
     private int direction = 1;
 
@@ -71,8 +72,9 @@ public class MarioController : MonoBehaviour
             //Debug.Log("Key Down");
             jumpingAction = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && boomerangsCount > 0)
         {
+            boomerangsCount -= 1;
             var boomerang = Instantiate(boomerangObject).GetComponent<Boomerang>();
             var displacement = new Vector3(direction, 0, 0);
             boomerang.transform.position = Mario.transform.position + displacement;
@@ -105,5 +107,10 @@ public class MarioController : MonoBehaviour
         var hitDirection = new Vector2(0, -0.5f);
         CastRayOfDeath(Mario.transform.position - displacement, hitDirection);
         CastRayOfDeath(Mario.transform.position + displacement, hitDirection);
+    }
+
+    public void CollectBoomerang()
+    {
+        boomerangsCount += 1;
     }
 }

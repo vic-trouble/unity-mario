@@ -56,7 +56,7 @@ public class GumbaController : MonoBehaviour
         if (hits.Length > 1 || hits.Length == 1 && hits[0].collider.gameObject.GetInstanceID() != gameObject.GetInstanceID())
         {
             DIRECTION = -DIRECTION;
-            Debug.Log("hit " + hits[0].rigidbody.gameObject.GetInstanceID() + " my " + gameObject.GetInstanceID());
+            //Debug.Log("hit " + hits[0].rigidbody.gameObject.GetInstanceID() + " my " + gameObject.GetInstanceID());
         }
 
         isAirborne = IsAirborne();

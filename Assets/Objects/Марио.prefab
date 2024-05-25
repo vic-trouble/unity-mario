@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4548954770581712698}
   m_Layer: 0
   m_Name: "\u041C\u0430\u0440\u0438\u043E"
-  m_TagString: Untagged
+  m_TagString: Mario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,4 +148,5 @@ MonoBehaviour:
   JUMP_HEIGHT: 150
   AIRBORNE_SPEED_FACTOR: 0.5
   boomerangObject: {fileID: 2278491245875633202, guid: 52ca1f4a4ae07784682a40d1b3218c91, type: 3}
+  boomerangsCount: 3
   isAirborne: 0

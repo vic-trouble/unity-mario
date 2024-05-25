@@ -62,14 +62,22 @@ public class Boomerang : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasHit = true;
-        var rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        if (rigidBody.velocity.magnitude >= FATAL_SPEED)
+        var collider = collision.collider.gameObject;
+        Debug.Log("Hit tag " + collider.tag);
+        if (collider.CompareTag("Enemy"))
         {
-            if (collision.collider.CompareTag("Enemy"))
+            var rigidBody = gameObject.GetComponent<Rigidbody2D>();
+            if (rigidBody.velocity.magnitude >= FATAL_SPEED)
             {
-                var monster = collision.collider.gameObject.GetComponent<GumbaController>();
+                var monster = collider.GetComponent<GumbaController>();
                 monster.Die();
             }
+        }
+        else if (collider.CompareTag("Mario"))
+        {
+            var player = collider.GetComponent<MarioController>();
+            player.CollectBoomerang();
+            Destroy(gameObject);
         }
     }
     /*
