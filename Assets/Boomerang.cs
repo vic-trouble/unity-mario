@@ -62,17 +62,15 @@ public class Boomerang : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasHit = true;
-        /*
         var rigidBody = gameObject.GetComponent<Rigidbody2D>();
         if (rigidBody.velocity.magnitude >= FATAL_SPEED)
         {
             if (collision.collider.CompareTag("Enemy"))
             {
-                var monster = collision.collider.gameObject.GetComponent<MonsterController>();
+                var monster = collision.collider.gameObject.GetComponent<GumbaController>();
                 monster.Die();
             }
         }
-        */
     }
     /*
     private void OnTriggerEnter2D(Collider2D collider)
