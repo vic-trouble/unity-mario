@@ -18,7 +18,7 @@ public class MarioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        ValidateBoomerangRenderer();
     }
 
     // Update is called once per frame
@@ -74,7 +74,7 @@ public class MarioController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && boomerangsCount > 0)
         {
-            boomerangsCount -= 1;
+            LooseBoomerang();
             var boomerang = Instantiate(boomerangObject).GetComponent<Boomerang>();
             var displacement = new Vector3(direction, 0, 0);
             boomerang.transform.position = Mario.transform.position + displacement;
@@ -112,5 +112,18 @@ public class MarioController : MonoBehaviour
     public void CollectBoomerang()
     {
         boomerangsCount += 1;
+        ValidateBoomerangRenderer();
+    }
+
+    public void LooseBoomerang()
+    {
+        boomerangsCount -= 1;
+        ValidateBoomerangRenderer();
+    }
+
+    private void ValidateBoomerangRenderer()
+    {
+        var boomerangRenderer = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        boomerangRenderer.GetComponent<SpriteRenderer>().enabled = boomerangsCount > 0;
     }
 }
