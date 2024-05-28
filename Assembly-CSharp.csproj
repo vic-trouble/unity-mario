@@ -53,10 +53,11 @@
     <UnityVersion>2020.2.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Boomerang.cs" />
     <Compile Include="Assets\MarioController.cs" />
     <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\GumbaController.cs" />
-    <Compile Include="Assets\Boomerang.cs" />
+    <Compile Include="Assets\MonsterGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
