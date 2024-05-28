@@ -7,8 +7,11 @@ public class MarioController : MonoBehaviour
     public int SPEED = 300;
     public int JUMP_HEIGHT = 500;
     public float AIRBORNE_SPEED_FACTOR = 0.5f;
+    public float TERMINAL_SPEED = 15;
+
     public GameObject boomerangObject;
     public int boomerangsCount = 3;
+    public bool godMode = false;
 
     private int direction = 1;
 
@@ -53,6 +56,12 @@ public class MarioController : MonoBehaviour
         }
 
         Mario.transform.localScale = new Vector3(direction, 1, 1);
+
+        if (Mario.velocity[1] < -TERMINAL_SPEED)
+        {
+            Destroy(gameObject);
+            // TODO: respawn
+        }
     }
 
     void Update()
@@ -126,5 +135,10 @@ public class MarioController : MonoBehaviour
     {
         var boomerangRenderer = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
         boomerangRenderer.GetComponent<SpriteRenderer>().enabled = boomerangsCount > 0;
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject.GetComponent<Collider2D>());
     }
 }

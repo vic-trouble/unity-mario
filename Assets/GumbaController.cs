@@ -91,17 +91,12 @@ public class GumbaController : MonoBehaviour
         Debug.DrawRay(Gumba.transform.position + disp, ray, Color.yellow, 0.5f);
 
         RaycastHit2D[] hits = Physics2D.RaycastAll(Gumba.transform.position + disp, ray, ray.magnitude);
-        /*if (hits.Length > 0)
+        foreach (var hit in hits)
         {
-            foreach (var hit in hits)
+            if (hit.collider.gameObject.CompareTag("Mario"))
             {
-                Debug.Log("hit " + hit.collider.gameObject.GetInstanceID() + " my " + gameObject.GetInstanceID());
+                hit.collider.gameObject.GetComponent<MarioController>().Die();
             }
-        }*/
-        /*
-        if (hits.Length == 0 || hits.Length > 1 || hits.Length == 1 && hits[0].collider.gameObject.GetInstanceID() != gameObject.GetInstanceID())
-        {
-            DIRECTION = -DIRECTION;
-        }*/
+        }
     }
 }

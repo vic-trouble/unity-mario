@@ -1830,8 +1830,10 @@ MonoBehaviour:
   SPEED: 300
   JUMP_HEIGHT: 500
   AIRBORNE_SPEED_FACTOR: 0.5
+  TERMINAL_SPEED: 15
   boomerangObject: {fileID: 0}
   boomerangsCount: 3
+  godMode: 0
   isAirborne: 0
 --- !u!1001 &1379505957
 PrefabInstance:
