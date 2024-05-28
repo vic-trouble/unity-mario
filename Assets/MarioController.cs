@@ -30,6 +30,7 @@ public class MarioController : MonoBehaviour
         var hitDirection = new Vector2(0, -0.5f);
         Debug.DrawRay(Mario.transform.position, hitDirection, Color.green, 0.1f);
 
+        // TODO: slow!
         isAirborne = true;
         RaycastHit2D[] hits = Physics2D.RaycastAll(Mario.transform.position, hitDirection, hitDirection.magnitude);
         if (hits.Length > 1 || hits.Length == 1 && hits[0] != Mario)

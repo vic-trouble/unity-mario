@@ -63,7 +63,7 @@ public class Boomerang : MonoBehaviour
     {
         hasHit = true;
         var collider = collision.collider.gameObject;
-        Debug.Log("Hit tag " + collider.tag);
+        //Debug.Log("Hit tag " + collider.tag);
         if (collider.CompareTag("Enemy"))
         {
             var rigidBody = gameObject.GetComponent<Rigidbody2D>();
