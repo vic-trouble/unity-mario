@@ -10,7 +10,7 @@ public class MarioController : MonoBehaviour
     public float TERMINAL_SPEED = 15;
 
     public GameObject boomerangObject;
-    public int boomerangsCount = 3;
+    public int boomerangsCount = 0;
     public bool godMode = false;
 
     private int direction = 1;
