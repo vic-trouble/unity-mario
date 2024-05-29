@@ -139,6 +139,9 @@ public class MarioController : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject.GetComponent<Collider2D>());
+        if (!godMode)
+        {
+            Destroy(gameObject.GetComponent<Collider2D>());
+        }
     }
 }
